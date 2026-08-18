@@ -48,7 +48,7 @@ model = pickle.load(open('project model.pkl','rb'))
 
 st.title("🕵️‍♂️ Email Spam Classifier")
 
-input_sms = st.text_area("Enter the message")
+input_sms = st.text_area("📩 Enter the message")
 
 
 if st.button('Predict'):
@@ -61,6 +61,7 @@ if st.button('Predict'):
     result = model.predict(vector_input)[0]
     # 4. Display
     if result == 1:
-        st.header("Spam")
+        st.header("🛑Spam")
+       
     else:
-        st.header("Not Spam")
+        st.header("🟢Not Spam")
